@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="680.0" prefWidth="812.0" style="-fx-background-color: #f1f1f1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.PatientPageController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="812.0" style="-fx-background-color: #393e46;">
+         <children>
+            <Label layoutX="-1.0" layoutY="1.0" prefHeight="81.0" prefWidth="168.0" text=" Lina's" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold Italic" size="55.0" />
+               </font>
+            </Label>
+            <Label layoutX="174.0" layoutY="16.0" text=" Pro Clinic" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox fx:id="SidePanel" alignment="CENTER" layoutX="5.0" layoutY="95.0" prefHeight="570.0" prefWidth="210.0" spacing="10.0" style="-fx-background-color: #393e46;">
+         <children>
+            <ImageView fitHeight="143.0" fitWidth="152.0">
+               <image>
+                  <Image url="@../Images/unnamed.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="p_SSN" alignment="CENTER" prefHeight="16.0" prefWidth="195.0" text="Label" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" alignment="CENTER" prefHeight="18.0" prefWidth="198.0" text="Label" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="gender" alignment="CENTER" prefHeight="16.0" prefWidth="200.0" text="Label" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label />
+            <Label />
+            <Label />
+            <Label />
+            <Label />
+            <Label />
+            <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#setLogOut" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #ff9900;" text="Log Out" textFill="#1c1a1a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TabPane fx:id="tabPane" layoutX="223.0" layoutY="84.0" prefHeight="598.0" prefWidth="588.0" style="-fx-background-color: #f1f1f1;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="MySchedule" style="-fx-background-color: #ff9900; -fx-font-color: #f1f1f1;" text="My Schedule">
+               <content>
+                  <AnchorPane fx:id="PaneMySchedule" prefHeight="574.0" prefWidth="572.0" style="-fx-background-color: #f1f1f1;">
+                     <children>
+                        <TableView fx:id="MStableView" layoutX="12.0" layoutY="53.0" prefHeight="338.0" prefWidth="563.0" style="-fx-border-color: #ff9900;">
+                           <columns>
+                              <TableColumn fx:id="MSSessionID" prefWidth="103.20002746582031" text="Session_ID" />
+                              <TableColumn fx:id="MSSessionDate" prefWidth="102.39996337890625" text="Session_Date" />
+                              <TableColumn fx:id="MSSessionTime" prefWidth="101.60003662109375" text="Session_Time" />
+                              <TableColumn fx:id="MSTherapistID" prefWidth="123.20001220703125" text="Therapist_ID" />
+                              <TableColumn fx:id="MSTherapistName" prefWidth="131.20001220703125" text="Therapist_Name" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btndeleteSelectedRow" layoutX="392.0" layoutY="434.0" mnemonicParsing="false" onAction="#setDeleteSession" style="-fx-background-color: #ff9900;" text="Delete Selected session " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="MyAccount" style="-fx-background-color: #ff9900;" text="My Account">
+               <content>
+                  <AnchorPane fx:id="PanePersonalInformation" prefHeight="560.0" prefWidth="575.0" style="-fx-background-color: #f1f1f1;">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="45.0" layoutY="70.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;" AnchorPane.leftAnchor="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="45.0" prefWidth="56.0" text="Name" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="PILabelName" alignment="CENTER" prefHeight="18.0" prefWidth="175.0" text="Label" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="45.0" layoutY="386.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="46.0" prefWidth="121.0" text="User Name" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="PILabelSSN" alignment="CENTER" prefHeight="18.0" prefWidth="175.0" text="Label" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="45.0" layoutY="170.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="46.0" prefWidth="169.0" text="Phone Number" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="PITxfPhone" style="-fx-background-color: #f4eeed;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="309.0" layoutY="70.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="45.0" prefWidth="56.0" text="Gender" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="PITxfGender" style="-fx-background-color: #f4eeed;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="308.0" layoutY="170.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="46.0" prefWidth="74.0" text="Birthdate" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <DatePicker fx:id="birthdate" prefHeight="26.0" prefWidth="215.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="45.0" layoutY="274.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="46.0" prefWidth="114.0" style="-fx-background-color: #f4eeed;" text="Campanion Name" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="PITxfCamoanionName" style="-fx-background-color: #f4eeed;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="309.0" layoutY="274.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="46.0" prefWidth="146.0" text="Campanion Phone" textAlignment="CENTER" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="PITxfCampanionPhone" style="-fx-background-color: #f4eeed;" />
+                           </children>
+                        </VBox>
+                        <Button fx:id="PIBtnSave" layoutX="461.0" layoutY="499.0" mnemonicParsing="false" onAction="#SetSave" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #393e46;" text="SAVE " textFill="#ff9900" />
+                        <VBox fx:id="BoxPassword" alignment="CENTER" layoutX="309.0" layoutY="386.0" maxHeight="83.0" maxWidth="218.0" prefHeight="81.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+                           <children>
+                              <Label fx:id="PILabelOldPass" prefHeight="16.5" prefWidth="93.0" text="Old Password" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <PasswordField fx:id="PIOldPass" />
+                              <Label fx:id="PILabelNewPass" prefHeight="16.5" prefWidth="86.0" text="New Password" textFill="#060606">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <PasswordField fx:id="PINewPass" />
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnEdit" layoutX="370.0" layoutY="499.0" mnemonicParsing="false" onAction="#setEdit" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #393e46;" text="Edit" textFill="#ff9900" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="Payment" style="-fx-background-color: #ff9900;" text="Payment">
+               <content>
+                  <AnchorPane fx:id="PanePayment" minHeight="0.0" minWidth="0.0" prefHeight="568.0" prefWidth="600.0" style="-fx-background-color: #f1f1f1;">
+                     <children>
+                        <TableView fx:id="paymenttableView" layoutX="12.0" layoutY="53.0" prefHeight="338.0" prefWidth="563.0" style="-fx-border-color: #ff9900;">
+                           <columns>
+                              <TableColumn fx:id="PSessionID" prefWidth="72.00001525878906" text="Session_ID" />
+                              <TableColumn fx:id="PSessionDate" prefWidth="84.79998779296875" text="Session_Date" />
+                              <TableColumn fx:id="PSessionTime" prefWidth="82.4000244140625" text="Session_Time" />
+                              <TableColumn fx:id="PTherapistID" prefWidth="78.39996337890625" text="Therapist_ID" />
+                              <TableColumn fx:id="PTherapistName" prefWidth="103.199951171875" text="Therapist_Name" />
+                              <TableColumn fx:id="PSessionPrice" prefWidth="81.5999755859375" text="Session_Price" />
+                              <TableColumn fx:id="PPaid" prefWidth="56.800036621093795" text="Paid" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="36.0" layoutY="436.0" text="Amount">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="212.0" layoutY="436.0" text="Paid">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="357.0" layoutY="436.0" text="Balance">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnPay" layoutX="493.0" layoutY="474.0" mnemonicParsing="false" onAction="#setBtnPay" prefHeight="51.0" prefWidth="62.0" style="-fx-background-color: #f1f1f1;">
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="55.0">
+                                 <image>
+                                    <Image url="@../Images/2510722%20(1).svg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="lAmount" layoutX="101.0" layoutY="437.0" prefHeight="18.0" prefWidth="62.0" style="-fx-border-color: #ff9900;" text="0" />
+                        <Label fx:id="lPaid" layoutX="262.0" layoutY="437.0" prefHeight="18.0" prefWidth="62.0" style="-fx-border-color: #ff9900;" text="0" />
+                        <Label fx:id="lBalance" layoutX="422.0" layoutY="436.0" prefHeight="18.0" prefWidth="62.0" style="-fx-border-color: #ff9900;" text="0" textFill="#ff2600" />
+                        <ProgressBar fx:id="progressBar" layoutX="13.0" layoutY="408.0" prefHeight="16.0" prefWidth="561.0" progress="0.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="ReserveYourSession" style="-fx-background-color: #ff9900;" text="Reserve Your Session">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f1f1f1;" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="258.0" prefWidth="302.0" style="-fx-background-color: #f1f1f1;">
+                     <children>
+                        <Button fx:id="btnReserve" layoutX="448.0" layoutY="504.0" mnemonicParsing="false" onAction="#setReserve" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #ff9900;" text="Reserve">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="reserveTableView" layoutX="13.0" layoutY="96.0" prefHeight="338.0" prefWidth="563.0" style="-fx-border-color: #ff9900;">
+                          <columns>
+                            <TableColumn fx:id="Session_Date" prefWidth="199.2000274658203" text="Session_Date" />
+                            <TableColumn fx:id="Session_Time" prefWidth="169.5999755859375" text="Session_Time" />
+                              <TableColumn fx:id="Therapy_Type" minWidth="6.39996337890625" prefWidth="192.00006103515625" text="Therapy_Type" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="lreserve1" layoutX="119.0" layoutY="434.0" text="Pending Therapist Approval.." textFill="#ff9900">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lreserve2" layoutX="176.0" layoutY="469.0" text="Check Your Schedule" textFill="#ff9900">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Text fill="#ff9900" layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can choose any of the following time slots 'up to 30 days' to reserve for a session through it." wrappingWidth="560.0">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="PendingSession" style="-fx-background-color: #ff9900;" text="Reservation Details">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f1f1f1;" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="258.0" prefWidth="302.0" style="-fx-background-color: #f1f1f1;">
+                     <children>
+                        <TableView fx:id="pendingTableView" layoutX="12.0" layoutY="84.0" prefHeight="338.0" prefWidth="563.0" style="-fx-border-color: #ff9900;">
+                           <columns>
+                              <TableColumn fx:id="Session_Date2" prefWidth="95.99995422363281" text="Session_Date" />
+                              <TableColumn fx:id="Session_Time2" prefWidth="92.0" text="Session_Time" />
+                              <TableColumn fx:id="Therapy_Type2" prefWidth="96.79998779296875" text="Therapy_Type" />
+                              <TableColumn fx:id="Therapist_Name2" minWidth="6.39996337890625" prefWidth="112.0" text="Therapist_Name" />
+                              <TableColumn fx:id="Therapist_ID2" prefWidth="97.5999755859375" text="Therapist_ID" />
+                              <TableColumn fx:id="Status2" prefWidth="225.5999755859375" text="Status" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

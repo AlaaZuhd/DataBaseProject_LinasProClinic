@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminViewController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="680.0" prefWidth="812.0" style="-fx-background-color: #f1f1f1;">
+         <children>
+            <Pane prefHeight="83.0" prefWidth="812.0" style="-fx-background-color: #393e46;">
+               <children>
+                  <Label layoutX="-1.0" layoutY="1.0" prefHeight="81.0" prefWidth="168.0" text=" Lina's" textFill="#ff9900">
+                     <font>
+                        <Font name="System Bold Italic" size="55.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="174.0" layoutY="16.0" text=" Pro Clinic" textFill="#ff9900">
+                     <font>
+                        <Font name="System Bold Italic" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox fx:id="SidePanel" alignment="CENTER" layoutX="5.0" layoutY="95.0" prefHeight="570.0" prefWidth="210.0" spacing="10.0" style="-fx-background-color: #393e46;">
+               <children>
+                  <ImageView fitHeight="143.0" fitWidth="152.0">
+                     <image>
+                        <Image url="@../Images/unnamed.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="195.0" text="ADMIN" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name" alignment="CENTER" prefHeight="18.0" prefWidth="198.0" text="Label" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label />
+                  <Label />
+                  <Label />
+                  <Label />
+                  <Label />
+                  <Label />
+                  <Label />
+                  <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#setLogOut" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #ff9900;" text="Log Out" textFill="#1c1a1a">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <TabPane fx:id="tabPane" layoutX="223.0" layoutY="84.0" prefHeight="598.0" prefWidth="588.0" style="-fx-background-color: #f1f1f1;" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="therapistsReport" style="-fx-background-color: #ff9900; -fx-font-color: #f1f1f1;" text="Therapists' Report">
+                     <content>
+                        <AnchorPane fx:id="PaneTherapistsReport" prefHeight="574.0" prefWidth="572.0" style="-fx-background-color: #f1f1f1;">
+                           <children>
+                              <TableView fx:id="therapistsTableView" layoutX="12.0" layoutY="53.0" prefHeight="338.0" prefWidth="563.0" style="-fx-border-color: #ff9900;">
+                                 <columns>
+                                    <TableColumn fx:id="Therapist_Name" prefWidth="103.20002746582031" text="Therapist_Name" />
+                                    <TableColumn fx:id="Therapist_ID" prefWidth="102.39996337890625" text="Therapist_ID" />
+                                    <TableColumn fx:id="Therapy_Type" prefWidth="101.60003662109375" text="Therapy_Type" />
+                                    <TableColumn fx:id="Session_Rate" prefWidth="123.20001220703125" text="Session_Rate" />
+                                    <TableColumn fx:id="Phone_Number" prefWidth="131.20001220703125" text="Phone_Number" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="btnTReport" layoutX="405.0" layoutY="508.0" mnemonicParsing="false" onAction="#setTReport" style="-fx-background-color: #ff9900;" text="Get Scheduled Meeting ">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <DatePicker fx:id="Tfrom" editable="false" layoutX="198.0" layoutY="419.0" />
+                              <Label layoutX="79.0" layoutY="423.0" style="-fx-border-color: #ff9900;" text="From">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="Tto" editable="false" layoutX="198.0" layoutY="463.0" />
+                              <Label layoutX="79.0" layoutY="467.0" style="-fx-border-color: #ff9900;" text="To">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="therapistsSessionsTableView" layoutX="13.0" layoutY="55.0" prefHeight="338.0" prefWidth="563.0" style="-fx-border-color: #ff9900;" visible="false">
+                                 <columns>
+                                    <TableColumn fx:id="Session_ID" prefWidth="98.39997863769531" text="Session_ID" />
+                                    <TableColumn fx:id="Session_Date" prefWidth="114.4000244140625" text="Session_Date" />
+                                    <TableColumn fx:id="Session_Time" prefWidth="128.0" text="Session_Time" />
+                                    <TableColumn fx:id="Patient_Name" prefWidth="105.59991455078125" text="Patient_Name" />
+                                    <TableColumn fx:id="Patient_ID" prefWidth="113.5999633789063" text="Patient_ID" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="btnBackT" layoutX="473.0" layoutY="508.0" mnemonicParsing="false" onAction="#setBackT" style="-fx-background-color: #ff9900;" text="Back" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="patientsReport" style="-fx-background-color: #ff9900;" text="Patients' Report">
+                     <content>
+                        <AnchorPane fx:id="PanePatientsReport" prefHeight="560.0" prefWidth="575.0" style="-fx-background-color: #f1f1f1;">
+                           <children>
+                              <TableView fx:id="patientTableView1" layoutX="14.0" layoutY="77.0" prefHeight="338.0" prefWidth="563.0" style="-fx-border-color: #ff9900;">
+                                 <columns>
+                                    <TableColumn fx:id="Patient_Name1" prefWidth="103.20002746582031" text="Patient_Name" />
+                                    <TableColumn fx:id="Patient_ID1" prefWidth="102.39996337890625" text="Patient_ID" />
+                                    <TableColumn fx:id="Companion_Name1" prefWidth="101.60003662109375" text="Companion_Name" />
+                                    <TableColumn fx:id="Companion_Phone_Num1" prefWidth="123.20001220703125" text="Companion_Phone_Num" />
+                                    <TableColumn fx:id="Patient_Gender1" prefWidth="131.20001220703125" text="Patient_Gender" />
+                                 </columns>
+                              </TableView>
+                              <Label fx:id="labelPTo" layoutX="81.0" layoutY="489.0" style="-fx-border-color: #ff9900;" text="To">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="Pto1" editable="false" layoutX="141.0" layoutY="484.0" />
+                              <Label fx:id="labelPFrom" layoutX="82.0" layoutY="439.0" style="-fx-border-color: #ff9900;" text="From">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="Pfrom1" editable="false" layoutX="141.0" layoutY="434.0" />
+                              <Button fx:id="btnPReport1" layoutX="416.0" layoutY="487.0" mnemonicParsing="false" onAction="#setPReport" style="-fx-background-color: #ff9900;" text="Get Scheduled Meeting ">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TableView fx:id="patientTableView11" layoutX="14.0" layoutY="73.0" prefHeight="342.0" prefWidth="562.0" style="-fx-border-color: #ff9900;" visible="false">
+                                 <columns>
+                                    <TableColumn fx:id="Therapist_NameP" prefWidth="103.20002746582031" text="Therapist_Name" />
+                                    <TableColumn fx:id="Therapist_IDP" prefWidth="102.39996337890625" text="Therapist_ID" />
+                                    <TableColumn fx:id="Therapy_TypeP" prefWidth="101.60003662109375" text="Therapy_Type" />
+                                    <TableColumn fx:id="Session_DateP" prefWidth="123.20001220703125" text="Session_Date" />
+                                    <TableColumn fx:id="Session_TimeP" prefWidth="131.20001220703125" text="Session_Time" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="btnPBack" layoutX="517.0" layoutY="485.0" mnemonicParsing="false" onAction="#setPBack" prefHeight="30.0" prefWidth="51.0" style="-fx-background-color: #ff9900;" text="Back" visible="false" />
+                              <Label fx:id="labelPatientName" layoutX="14.0" layoutY="14.0" text="Patient Name : " textFill="#ff9900" visible="false">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="17.0" />
+                                 </font></Label>
+                              <Label fx:id="labelPatientID" layoutX="14.0" layoutY="45.0" text="Patient ID : " textFill="#ff9900" visible="false">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="17.0" />
+                                 </font></Label>
+                              <Label fx:id="labelCompanionName" layoutX="314.0" layoutY="14.0" text="Companion Name : " textFill="#ff9900" visible="false">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="17.0" />
+                                 </font></Label>
+                              <Label fx:id="labelCompanionPhoneNumber" layoutX="314.0" layoutY="45.0" text="Companion Phone :" textFill="#ff9900" visible="false">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="17.0" />
+                                 </font></Label>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="financialReport" style="-fx-background-color: #ff9900;" text="Financial Report">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <DatePicker fx:id="fromDateFinancial" editable="false" layoutX="267.0" layoutY="58.0" />
+                              <DatePicker fx:id="toDateFinancial" editable="false" layoutX="267.0" layoutY="105.0" />
+                              <Label layoutX="124.0" layoutY="62.0" style="-fx-border-color: #ff9900;" text="From">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="124.0" layoutY="109.0" style="-fx-border-color: #ff9900;" text="To">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <BarChart fx:id="financialBarChart" layoutX="52.0" layoutY="149.0" prefHeight="362.0" prefWidth="484.0" title="Financial Report ">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="yAxis" side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                              <Button fx:id="btnFReport" layoutX="384.0" layoutY="511.0" mnemonicParsing="false" onAction="#setFReport" style="-fx-background-color: #ff9900;" text="Get Financial Report">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content></Tab>
+                  <Tab fx:id="StatisticsAboutTheClinic" style="-fx-background-color: #ff9900;" text="Statistics About The clinic">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane fx:id="PaneStatistics" layoutY="30.0" prefHeight="508.0" prefWidth="588.0" style="-fx-background-color: #f1f1f1;" visible="false">
+                                 <children>
+                                    <BarChart fx:id="therapistChart" animated="false" layoutX="36.0" layoutY="33.0" prefHeight="363.0" prefWidth="516.0" style="-fx-border-color: #ff9900; -fx-background-color: #f4eeed;" title="NO. of Therapists VS. Therapy Type">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="therapistX" label="Therapy Type" side="BOTTOM" tickLabelFill="#393e46" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="therapistY" label="NO. Of Therapist" side="LEFT" tickLabelFill="#393e46" />
+                                       </yAxis>
+                                    </BarChart>
+                                    <Label fx:id="totalNumberOfTHerapists" layoutX="36.0" layoutY="424.0" text="Total Number of therapists : " textFill="#ff9900">
+                                       <font>
+                                          <Font name="Bernard MT Condensed" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="patientStatisticsPane" layoutY="42.0" prefHeight="503.0" prefWidth="588.0" style="-fx-background-color: #f1f1f1;" visible="false">
+                                 <children>
+                                    <BarChart fx:id="patientChart" animated="false" layoutX="36.0" layoutY="29.0" prefHeight="363.0" prefWidth="516.0" style="-fx-border-color: #ff9900; -fx-background-color: #f4eeed;" title="NO. of Patients VS. Therapy Type">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="patientX" label="Therapy Type" side="BOTTOM" tickLabelFill="#393e46" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="patientY" label="NO. Of Patients" side="LEFT" tickLabelFill="#393e46" />
+                                       </yAxis>
+                                    </BarChart>
+                                    <Label fx:id="totalnumberOfPatients" layoutX="36.0" layoutY="426.0" text="Total Number of Patients : " textFill="#ff9900">
+                                       <font>
+                                          <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="companionStatisticsPane" layoutY="44.0" prefHeight="516.0" prefWidth="588.0" style="-fx-background-color: #f1f1f1;">
+                                 <children>
+                                    <Label fx:id="totalNumberOfCompanions" layoutX="36.0" layoutY="424.0" text="Total Number of Companions : " textFill="#ff9900">
+                                       <font>
+                                          <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <BarChart fx:id="companionChart" animated="false" layoutX="36.0" layoutY="26.0" prefHeight="363.0" prefWidth="516.0" style="-fx-border-color: #ff9900; -fx-background-color: #f4eeed;" title="NO. Of Patients VS. Companion">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="companionX" label="Companion" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="companionY" label="NO. Of Patients" side="LEFT" />
+                                       </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="btntherapistsStatistics" layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#setStatTherapist" prefHeight="31.0" prefWidth="177.0" style="-fx-background-color: #ff9900;" text="get Statistics about therapists">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnpatientsStatistics" layoutX="206.0" layoutY="12.0" mnemonicParsing="false" onAction="#setStatPatient" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #ff9900;" text="get Statistics about patients">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btncompanionStatistics" layoutX="395.0" layoutY="12.0" mnemonicParsing="false" onAction="#setStatCompanion" prefHeight="31.0" prefWidth="179.0" style="-fx-background-color: #ff9900;" text="get Statistics about companion">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                                 </font></Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

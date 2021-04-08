@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="668.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.PatientViewController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="793.0" style="-fx-background-color: #393e46;">
+         <children>
+            <Label layoutX="-1.0" layoutY="1.0" prefHeight="81.0" prefWidth="168.0" text=" Lina's" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold Italic" size="55.0" />
+               </font>
+            </Label>
+            <Label layoutX="164.0" layoutY="18.0" text=" Pro Clinic" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="74.0" layoutX="566.0" layoutY="10.0">
+               <image>
+                  <Image url="@../Images/patient.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LabelName" layoutX="489.0" layoutY="28.0" prefHeight="28.0" prefWidth="140.0" text="Name" textAlignment="CENTER" textFill="#f1f1f1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox fx:id="SidePanel" alignment="CENTER" layoutX="6.0" layoutY="88.0" prefHeight="574.0" prefWidth="204.0" spacing="50.0" style="-fx-background-color: #393e46;">
+         <children>
+            <Button fx:id="BtnPersonalInformarion" mnemonicParsing="false" onAction="#setPersonalInformation" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #ff9900;" text="Personal Information" textFill="#f1f1f1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="BtnMySchedule" mnemonicParsing="false" onAction="#setMySchedule" style="-fx-background-color: #ff9900;" text="My Schedule" textFill="#f1f1f1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" text="Button" />
+            <Button mnemonicParsing="false" text="Button" />
+            <Button fx:id="BtnPersonalInformarion1" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #ff9900;" text="Log Out" textFill="#f1f1f1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="PanePersonalInformation" layoutX="216.0" layoutY="93.0" prefHeight="574.0" prefWidth="572.0" style="-fx-background-color: #bbbbbb;">
+         <children>
+            <VBox layoutX="48.0" layoutY="108.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;" AnchorPane.leftAnchor="48.0">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="56.0" text="Name" textFill="#ff9900" />
+                  <Label fx:id="PILabelName" prefHeight="18.0" prefWidth="175.0" text="Label" textFill="#ff9900">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="48.0" layoutY="424.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="121.0" text="User Name" textFill="#ff9900" />
+                  <Label fx:id="PILabelSSN" prefHeight="18.0" prefWidth="175.0" text="Label" textFill="#ff9900">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="48.0" layoutY="208.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="169.0" text="Phone Number" textFill="#ff9900" />
+                  <TextField fx:id="PITxfPhone" style="-fx-background-color: #f4eeed;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+               </children>
+            </VBox>
+            <VBox layoutX="312.0" layoutY="108.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="56.0" text="Gender" textFill="#ff9900" />
+                  <TextField fx:id="PITxfGender" style="-fx-background-color: #f4eeed;" />
+               </children>
+            </VBox>
+            <VBox layoutX="311.0" layoutY="208.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="56.0" text="Birthdate" textFill="#ff9900" />
+                  <DatePicker fx:id="PIDate" />
+               </children>
+            </VBox>
+            <VBox layoutX="48.0" layoutY="312.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="114.0" style="-fx-background-color: #f4eeed;" text="Campanion Name" textFill="#ff9900" />
+                  <TextField fx:id="PITxfCamoanionName" style="-fx-background-color: #f4eeed;" />
+               </children>
+            </VBox>
+            <VBox layoutX="312.0" layoutY="312.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="120.0" text="Campanion Phone" textFill="#ff9900" />
+                  <TextField fx:id="PITxfCampanionPhone" style="-fx-background-color: #f4eeed;" />
+               </children>
+            </VBox>
+            <Button layoutX="454.0" layoutY="22.0" mnemonicParsing="false" onAction="#SetEdit" prefHeight="62.0" prefWidth="65.0" style="-fx-background-color: #bbbbbb;">
+               <graphic>
+                  <ImageView fx:id="PIBtnEdit" fitHeight="54.0" fitWidth="56.0">
+                     <image>
+                        <Image url="@../Images/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="PIBtnSave" layoutX="48.0" layoutY="530.0" mnemonicParsing="false" onAction="#SetSave" style="-fx-background-color: #393e46;" text="SAVE " textFill="#ff9900" />
+            <VBox fx:id="BoxPassword" layoutX="312.0" layoutY="424.0" maxHeight="83.0" maxWidth="218.0" prefHeight="83.0" prefWidth="218.0" style="-fx-border-color: #393e46; -fx-background-color: #f4eeed;">
+               <children>
+                  <Label fx:id="PILabelOldPass" prefHeight="19.0" prefWidth="93.0" text="Old Password" textFill="#ff9900" />
+                  <PasswordField fx:id="PIOldPass" />
+                  <Label fx:id="PILabelNewPass" prefHeight="22.0" prefWidth="86.0" text="New Password" textFill="#ff9900" />
+                  <PasswordField fx:id="PINewPass" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneMySchedule" layoutX="216.0" layoutY="88.0" prefHeight="574.0" prefWidth="572.0" style="-fx-background-color: #bbbbbb;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="My Schedule" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="MStableView" layoutX="25.0" layoutY="84.0" prefHeight="320.0" prefWidth="520.0">
+               <columns>
+                  <TableColumn fx:id="MSSessionID" prefWidth="100.0" text="Session_ID" />
+                  <TableColumn fx:id="MSSessionDate" prefWidth="100.0" text="Session_Date" />
+                  <TableColumn fx:id="MSSessionTime" prefWidth="100.0" text="Session_Time" />
+                  <TableColumn fx:id="MSTherapistID" prefWidth="100.0" text="Therapist_ID" />
+                  <TableColumn fx:id="MSTherapistName" prefWidth="120.0" text="Therapist_Name" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneHome" layoutX="216.0" layoutY="93.0" prefHeight="574.0" prefWidth="572.0" style="-fx-background-color: #bbbbbb;" visible="false" />
+   </children>
+</AnchorPane>

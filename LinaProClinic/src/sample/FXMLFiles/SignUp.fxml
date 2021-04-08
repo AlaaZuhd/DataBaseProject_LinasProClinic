@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="668.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SignUpController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4eeed" height="570.0" layoutX="423.0" layoutY="91.0" stroke="#ff9900" strokeType="INSIDE" width="354.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4eeed" height="570.0" layoutX="12.0" layoutY="91.0" stroke="#ff9900" strokeType="INSIDE" width="354.0" />
+        <Pane prefHeight="83.0" prefWidth="793.0" style="-fx-background-color: #393e46;">
+            <children>
+                <Label layoutY="1.0" text=" Lina's" textFill="#ff9900">
+                    <font>
+                        <Font name="System Bold Italic" size="55.0" />
+                    </font></Label>
+                <Label layoutX="164.0" layoutY="18.0" text=" Pro Clinic" textFill="#ff9900">
+                    <font>
+                        <Font name="System Bold Italic" size="35.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnBack" layoutX="700.0" layoutY="5.0" mnemonicParsing="false" onAction="#setBack" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #ff9900;" text="Back">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Label layoutX="55.0" layoutY="167.0" text="Sign up As Patient" textFill="#393e46">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="455.0" layoutY="167.0" text="Sign up As Therapist">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txfPName" layoutX="154.0" layoutY="227.0" promptText="Full Name" />
+        <TextField fx:id="txfPUserName" layoutX="154.0" layoutY="285.0" promptText="Only 5 Digits 'User Name = SSN'" />
+        <TextField fx:id="txfPPhoneNumber" layoutX="154.0" layoutY="459.0" promptText="Phone Number" />
+        <Label layoutX="34.0" layoutY="232.0" text="Name" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="32.0" layoutY="290.0" text="User Name" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="35.0" layoutY="350.0" text="Birth Date" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="409.0" text="Gender" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="36.0" layoutY="464.0" text="Phone Number" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="516.0" text="Password" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txfTName" layoutX="570.0" layoutY="227.0" promptText="Full Name" />
+        <TextField fx:id="txfTUserName" layoutX="570.0" layoutY="285.0" promptText="Only 3 Digits 'User Name = SSN'" />
+        <TextField fx:id="txfyears" layoutX="568.0" layoutY="402.0" promptText="Years of Experience" />
+        <TextField fx:id="txfTPhoneNumber" layoutX="568.0" layoutY="457.0" promptText="Phone Number" />
+        <Label layoutX="447.0" layoutY="230.0" text="Name" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="447.0" layoutY="288.0" text="User Name" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="445.0" layoutY="348.0" text="Birth Date" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="448.0" layoutY="407.0" prefHeight="22.0" prefWidth="115.0" text="Experience" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="443.0" layoutY="462.0" text="Phone Number" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="447.0" layoutY="514.0" text="Password" textFill="#393e46">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnPSignUp" layoutX="256.0" layoutY="623.0" mnemonicParsing="false" onAction="#setPSignup" style="-fx-background-color: #ff9900; -fx-border-color: #393e46;" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+        <Button fx:id="btnTSginup" layoutX="676.0" layoutY="623.0" mnemonicParsing="false" onAction="#setTSignup" style="-fx-background-color: #ff9900; -fx-border-color: #393e46;" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <MenuButton fx:id="therapyType" layoutX="568.0" layoutY="561.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #ff9900; -fx-border-color: #393e46;" text="Therapy Type" textFill="#393e46">
+        <items>
+          <MenuItem fx:id="speech" mnemonicParsing="false" text="Speech" />
+          <MenuItem fx:id="musical" mnemonicParsing="false" text="Musical" />
+            <MenuItem fx:id="occupational" mnemonicParsing="false" text="Occupational" />
+            <MenuItem fx:id="behavioral" mnemonicParsing="false" text="Behavioral" />
+        </items>
+      </MenuButton>
+      <Label layoutX="449.0" layoutY="566.0" text="Therapy Type" textFill="#393e46">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="72.0" fitWidth="89.0" layoutX="560.0" layoutY="90.0">
+         <image>
+            <Image url="@../Images/newtherapist.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="107.0" layoutX="121.0" layoutY="84.0">
+         <image>
+            <Image url="@../Images/newpatient.png" />
+         </image>
+      </ImageView>
+        <Label fx:id="TWrongYearOfExperince" layoutX="537.0" layoutY="436.0" text="Enter a valid year of experince " textFill="RED" visible="false" />
+        <Label fx:id="TWrongName" layoutX="616.0" layoutY="258.0" prefHeight="18.0" prefWidth="98.0" text="Enter a valid name" textFill="RED" visible="false" />
+        <Label fx:id="TWrongUserName" layoutX="545.0" layoutY="316.0" text="Enter a valid user name 'SSN'" textFill="RED" visible="false" />
+        <Label fx:id="TWrongBirthDate" layoutX="494.0" layoutY="376.0" text="How DID you Graduate!!" textFill="RED" visible="false" />
+        <Label fx:id="TWrongPhoneNumber" layoutX="550.0" layoutY="490.0" text="Enter a valid phone number" textFill="RED" visible="false" />
+        <Label fx:id="PWrongName" layoutX="217.0" layoutY="258.0" text="Enter a valid name" textFill="RED" visible="false" />
+        <Label fx:id="PWrongUserName" layoutX="186.0" layoutY="316.0" prefHeight="21.0" prefWidth="157.0" text="Enter a valid user name" textFill="RED" visible="false" />
+        <Label fx:id="PWrongBirthDate" layoutX="96.0" layoutY="376.0" prefHeight="21.0" prefWidth="242.0" text="Enter a valid Birth Date (YY-MM-DD)" textFill="RED" visible="false" />
+        <Label fx:id="PWrongPhoneNumber" layoutX="151.0" layoutY="490.0" prefHeight="21.0" prefWidth="193.0" text="Enter a valid Phone Number" textFill="RED" visible="false" />
+        <Label fx:id="TWrongTherapyType" layoutX="542.0" layoutY="596.0" text="Please choose a therapy type" textFill="RED" visible="false" />
+      <Label fx:id="PWrongGender" layoutX="151.0" layoutY="425.0" text="You have to choose a gender" textFill="#fc0000" visible="false" />
+      <Label fx:id="TWrongPassword" layoutX="565.0" layoutY="542.0" text="Please fill in the password" textFill="RED" visible="false" />
+      <Label fx:id="PWrongPassword" layoutX="159.0" layoutY="542.0" prefHeight="18.0" prefWidth="137.0" text="Please fill in the password" textFill="RED" visible="false" />
+      <Label fx:id="TWrongSSN1" layoutX="431.0" layoutY="623.0" text="The user name already exist," textFill="RED" visible="false" />
+      <Label fx:id="TWrongSSN2" layoutX="431.0" layoutY="644.0" text="Please choose another one" textFill="RED" visible="false" />
+      <Label fx:id="PWrongSSN11" layoutX="79.0" layoutY="616.0" text="The user name already exist," textFill="RED" visible="false" />
+      <Label fx:id="PWrongSSN21" layoutX="79.0" layoutY="637.0" text="Please choose another one" textFill="RED" visible="false" />
+      <RadioButton fx:id="rbPFemale" layoutX="156.0" layoutY="411.0" mnemonicParsing="false" text="Female">
+         <toggleGroup>
+            <ToggleGroup fx:id="tG" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbPMale" layoutX="247.0" layoutY="411.0" mnemonicParsing="false" text="Male" toggleGroup="$tG" />
+      <PasswordField fx:id="txfPPassword" layoutX="154.0" layoutY="514.0" promptText="Password" />
+      <PasswordField fx:id="txfTPassword" layoutX="569.0" layoutY="512.0" promptText="Password" />
+      <CheckBox fx:id="boxSpeech" layoutX="156.0" layoutY="568.0" mnemonicParsing="false" style="-fx-border-color: #ff9900;" text="Speech" textFill="#393e46" />
+      <Label layoutX="38.0" layoutY="568.0" prefHeight="21.0" prefWidth="96.0" text="Therapy Type" textFill="#393e46">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="boxOccupational" layoutX="237.0" layoutY="568.0" mnemonicParsing="false" style="-fx-border-color: #ff9900;" text="Occupational" textFill="#393e46" />
+      <CheckBox fx:id="boxMusical" layoutX="156.0" layoutY="596.0" mnemonicParsing="false" style="-fx-border-color: #ff9900;" text="Musical" textFill="#393e46" />
+      <CheckBox fx:id="boxBehavioral" layoutX="237.0" layoutY="596.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="118.0" style="-fx-border-color: #ff9900;" text="Behavioral" textFill="#393e46" />
+      <ImageView fitHeight="570.0" fitWidth="67.0" layoutX="360.0" layoutY="91.0">
+         <image>
+            <Image url="@../Images/vertical-line.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="354.0" layoutX="423.0" layoutY="167.0">
+         <image>
+            <Image url="@../Images/substract.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="354.0" layoutX="12.0" layoutY="167.0">
+         <image>
+            <Image url="@../Images/substract.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="txfTBD" layoutX="567.0" layoutY="348.0" prefHeight="26.0" prefWidth="149.0" />
+      <DatePicker fx:id="txfPBD" layoutX="153.0" layoutY="348.0" prefHeight="26.0" prefWidth="149.0" />
+    </children>
+</AnchorPane>

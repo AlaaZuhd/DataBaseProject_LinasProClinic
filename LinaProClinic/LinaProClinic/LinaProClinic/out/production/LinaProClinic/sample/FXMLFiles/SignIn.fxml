@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="668.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SingInController">
+    <children>
+        <Pane prefHeight="83.0" prefWidth="793.0" style="-fx-background-color: #393e46;">
+            <children>
+                <Label layoutY="1.0" text=" Lina's" textFill="#ff9900">
+                    <font>
+                        <Font name="System Bold Italic" size="55.0" />
+                    </font></Label>
+                <Label layoutX="164.0" layoutY="18.0" text=" Pro Clinic" textFill="#ff9900">
+                    <font>
+                        <Font name="System Bold Italic" size="35.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnBack" layoutX="645.0" layoutY="17.0" mnemonicParsing="false" onAction="#setBack" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #ff9900;" text="Back">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Label layoutX="92.0" layoutY="251.0" text="Sign In As Patient">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="465.0" layoutY="251.0" text="Sign In As Therapist">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="58.0" layoutY="332.0" text="User Name">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="58.0" layoutY="382.0" text="Password">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="426.0" layoutY="332.0" text="User Name">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="431.0" layoutY="382.0" text="Password">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txfPUserNameLogin" layoutX="167.0" layoutY="327.0" promptText="User Name" />
+        <TextField fx:id="txfTUserNameLogin" layoutX="548.0" layoutY="327.0" promptText="User Name 'SSN'" />
+        <Button fx:id="btnPLogin" layoutX="292.0" layoutY="448.0" mnemonicParsing="false" onAction="#setPLogIn" style="-fx-background-color: #ff9900;" text="Log In" />
+        <Button fx:id="btnTLogin" layoutX="675.0" layoutY="448.0" mnemonicParsing="false" onAction="#setTLogin" style="-fx-background-color: #ff9900;" text="Log in" />
+        <Label fx:id="Twrong" layoutX="534.0" layoutY="420.0" text="Wrong Username or Password" textFill="#ea0000" visible="false" />
+        <Label fx:id="Pwrong" layoutX="151.0" layoutY="420.0" text="Wrong Username or Password" textFill="#ea0000" visible="false" />
+      <Line endX="100.0" layoutX="197.0" layoutY="296.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="598.0" layoutY="296.0" startX="-100.0" />
+      <ImageView fitHeight="101.0" fitWidth="85.0" layoutX="540.0" layoutY="140.0">
+         <image>
+            <Image url="@../Images/therapist.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="91.0" layoutX="151.0" layoutY="140.0">
+         <image>
+            <Image url="@../Images/patient.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="173.0" fitWidth="27.0" layoutX="376.0" layoutY="296.0">
+         <image>
+            <Image url="@../Images/vline.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="txfPPasswordLogin" layoutX="168.0" layoutY="382.0" promptText="Password" />
+      <PasswordField fx:id="txfTPasswordLogin" layoutX="548.0" layoutY="380.0" promptText="Password" />
+    </children>
+</AnchorPane>

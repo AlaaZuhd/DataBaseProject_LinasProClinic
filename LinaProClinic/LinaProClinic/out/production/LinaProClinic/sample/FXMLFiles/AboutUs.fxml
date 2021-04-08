@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="668.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AboutUsController">
+   <children>
+       <Pane prefHeight="83.0" prefWidth="793.0" style="-fx-background-color: #393e46;">
+           <children>
+               <Label layoutY="1.0" text=" Lina's" textFill="#ff9900">
+                   <font>
+                       <Font name="System Bold Italic" size="55.0" />
+                   </font></Label>
+               <Label layoutX="164.0" layoutY="18.0" text=" Pro Clinic" textFill="#ff9900">
+                   <font>
+                       <Font name="System Bold Italic" size="35.0" />
+                   </font>
+               </Label>
+            <Button fx:id="btnBack" layoutX="645.0" layoutY="17.0" mnemonicParsing="false" onAction="#setBack" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #ff9900;" text="Back">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+           </children>
+       </Pane>
+      <TextArea layoutX="16.0" layoutY="106.0" prefHeight="69.0" prefWidth="761.0" text="لينا بروكلبنيك هي عيادة تخصصية في مجال تطور الطفل ، تقدم العيادة خدمات علاج النطق ،العلاج وظيفي ،العلاج سلوكي&#10; والعلاج بالموسيقى وغيرها&#10;&#10;" />
+      <TextArea layoutX="16.0" layoutY="221.0" prefHeight="75.0" prefWidth="761.0" text="مقدرة الطفل على التواصل الجيد مع محيطه مهمة جدا لجودة حياته. هدف قسم علاج النطق والتواصل هو مساعدة الأطفال&#10; المعالَجين على استعمال اللغة, الكلام أو أي طريقة تواصل أخرى بالملائمة مع سنه, قدراته واحتياجاته. الأطفال والمراهقين &#10;الذين يعانون من إصابات مولودة, مشاكل في التطور والنمو أو إصابات مكتسبة, يمرون في المرحلة الأولى بتشخيص يتطرق&#10; لمجالات اللغة, الكلام, أداء الأكل والبلع, وفيما بعد يُحَدد برنامج علاجي ملائم لنقاط الضعف والقوة عند الطفل.تستقبل &#10;هذه العيادة الأطفال من عمر(١٨ شهر - ١٨ سنة) الذين يعانون من اضطرابات في التواصل واللغة&#10;" />
+      <Label layoutX="456.0" layoutY="191.0" text="Speech therapy علاج اللغة والاتصال">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="304.0" text="Occupational therapy العلاج الوظيفي">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="16.0" layoutY="334.0" prefHeight="75.0" prefWidth="761.0" text="طاقم العلاج الوظيفي يهتم بتحسين الاستقلالية في أداء الطفل بهدف توفير أدوات ومهارات التي تمكن الطفل من التكيف &#10;لمتطلبات الحياة. هذا المجال يقوم بتوفير الدعم لتمكين المريض من تطوير واستعادة مهارات اجتماعية, مهارات اللعب &#10;و قدرات التعلم بالملائمة مع سنه. احد الأهداف الأساسية في العلاج الوظيفي للأطفال هو تمكين الطفل من الوصول &#10;لأداء مستقل قدر الإمكان بالملائمة لقدراته .المعالِجَة بالتشغيل تقوم بتشخيص الطفل ومن بعد ذلك ملائمة برنامج علاجي &#10;خاص به. العلاج يشمل مركبات حسية, حركية, وأيضا مركبات ذهنية وسلوكية" />
+      <Label layoutX="386.0" layoutY="411.0" text="Applied Behavior Analysis العلاج السلوكي">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="16.0" layoutY="441.0" prefHeight="75.0" prefWidth="761.0" text="مبني على الإيجاب و التعزيز، فيتم وضع برامج تشمل جميع نواحي حياة الطفل إبتداءاً من أبسط المهارات كمسك ملعقة &#10;الطعام أو فرشاية الأسنان إلى الكتابة و التأهيل بعمر متقدم كمرحلة الشباب للشباب أو الشابات  للحصول على وظيفة &#10;تتناسب مع احتياجاتهم لا يشمل النظام التغلب فقط على الجانب السيء كما هو متعارف و متداول (كالتقليل من نوبات&#10; الصراخ أو ضرب الرأس أو غيرها من تصرفات بحاجة لتدخل وتعديل ) لكنه يشمل تعزيز السلوكيات الإيجابية ويساعد على&#10; اكتسابها و بنفس الوقت اكتساب مهارات جديدة.&#10;" />
+      <Label layoutX="489.0" layoutY="527.0" text="Music therapy ألعلاج الموسيقي">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="16.0" layoutY="557.0" prefHeight="75.0" prefWidth="761.0" text="هو علاج نفسي-حسي تستخدم فيه الموسيقى كوسيلة علاج او أداة يتم من خلالها التواصل بين الطفل و المعالج. يعتمد&#10; المعالج المتخصص بالموسيقى على استعمال ودمج الموسيقى في مساقات و نظريات العلاج النفسي. هذا النوع من العلاج &#10;ملائم للأطفال ذوي الاحتياجات الخاصة من جميع الأعمار مثل الأطفال الذين يعانون من التوحد، صعوبات في التعلم، &#10;مشاكل سلوكية واجتماعية أو ممن يعانون من ضغوط نفسية.&#10;" />
+   </children>
+</AnchorPane>

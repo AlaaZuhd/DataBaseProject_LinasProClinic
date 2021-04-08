@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Controller">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="793.0" style="-fx-background-color: #393e46;">
+         <children>
+            <Label layoutY="1.0" text=" Lina's" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold Italic" size="55.0" />
+               </font></Label>
+            <Label layoutX="164.0" layoutY="18.0" text=" Pro Clinic" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSignIn" layoutX="425.0" layoutY="26.0" mnemonicParsing="false" onAction="#setSignIn" style="-fx-background-color: #FF9900;" text="Sign In" />
+            <Button fx:id="btnSignUp" layoutX="538.0" layoutY="26.0" mnemonicParsing="false" onAction="#setSignUp" style="-fx-background-color: #FF9900;" text="Sing Up" />
+            <Button fx:id="btnAboutUs" layoutX="650.0" layoutY="26.0" mnemonicParsing="false" onAction="#setAboutUs" style="-fx-background-color: #FF9900;" text="About Us" />
+         </children>
+      </Pane>
+      <Pane layoutX="-5.0" layoutY="80.0" prefHeight="498.0" prefWidth="803.0">
+         <children>
+            <ImageView fitHeight="505.0" fitWidth="793.0" layoutX="5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/LinaProclinic2.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="585.0" prefHeight="83.0" prefWidth="793.0" style="-fx-background-color: #393e46;">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="54.0" layoutX="277.0" layoutY="12.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/facebook.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="facebookLine" layoutX="351.0" layoutY="30.0" onAction="#goToFacebook" style="-fx-background-color: #FF9900;" text="Lina's Pro Clinic" />
+            <ImageView fitHeight="60.0" fitWidth="54.0" layoutX="466.0" layoutY="14.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/whatsapp.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="538.0" layoutY="33.0" style="-fx-background-color: #FF9900;" text="052-368-4817" />
+            <ImageView fitHeight="51.0" fitWidth="54.0" layoutX="642.0" layoutY="14.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/telephone.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="702.0" layoutY="31.0" style="-fx-background-color: #FF9900;" text="02-622-2707" />
+            <Label layoutX="14.0" layoutY="12.0" text="Contact Us" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

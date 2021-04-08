@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="668.0" prefWidth="793.0" style="-fx-background-color: #f1f1f1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AboutUsController">
+    <children>
+        <Pane prefHeight="83.0" prefWidth="793.0" style="-fx-background-color: #393e46;">
+            <children>
+                <Label layoutY="1.0" text=" Lina's" textFill="#ff9900">
+                    <font>
+                        <Font name="System Bold Italic" size="55.0" />
+                    </font></Label>
+                <Label layoutX="164.0" layoutY="18.0" text=" Pro Clinic" textFill="#ff9900">
+                    <font>
+                        <Font name="System Bold Italic" size="35.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnBack" layoutX="700.0" layoutY="5.0" mnemonicParsing="false" onAction="#setBack" prefHeight="70.0" prefWidth="75.0" style="-fx-background-color: #ff9900;" text="Back">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <TextArea layoutX="16.0" layoutY="106.0" prefHeight="69.0" prefWidth="761.0" style="-fx-background-color: #f4eeed; -fx-border-color: #ff9900;" text="Lina Pro clinic is a clinic specializing in child development. The clinic offers speech therapy, occupational therapy, and behavioral therapy. Music therapy and others" wrapText="true" />
+        <TextArea fx:id="textArea1" layoutX="14.0" layoutY="219.0" prefHeight="75.0" prefWidth="761.0" style="-fx-background-color: #f4eeed; -fx-border-color: #ff9900;" wrapText="true" />
+        <Label fx:id="label1" layoutX="16.0" layoutY="189.0" text="Speech therapy" textFill="#393e46">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="label2" layoutX="16.0" layoutY="294.0" text="Occupational therapy" textFill="#393e46">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="textArea2" layoutX="16.0" layoutY="324.0" prefHeight="75.0" prefWidth="761.0" style="-fx-background-color: #f4eeed; -fx-border-color: #ff9900;" wrapText="true" />
+        <Label fx:id="label3" layoutX="16.0" layoutY="399.0" text="Applied Behavior Analysis" textFill="#393e46">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="textArea3" layoutX="16.0" layoutY="429.0" prefHeight="75.0" prefWidth="761.0" style="-fx-background-color: #f4eeed; -fx-border-color: #ff9900;" wrapText="true" />
+        <Label fx:id="label4" layoutX="16.0" layoutY="510.0" text="Music therapy" textFill="#393e46">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="textArea4" layoutX="16.0" layoutY="540.0" prefHeight="75.0" prefWidth="761.0" style="-fx-background-color: #f4eeed; -fx-border-color: #ff9900;" wrapText="true" />
+    </children>
+</AnchorPane>
